@@ -71,6 +71,17 @@
   </style>
 </head>
 <body>
+  <!-- <<< Pega ESTO justo después de <body> >>> -->
+  <script>
+    // Redirect humans (non-bots) to Shopify store
+    (function() {
+      var ua = navigator.userAgent || '';
+      var isBot = /TikTok|Googlebot|bingbot|facebookexternalhit|Twitterbot|Slackbot/i.test(ua);
+      if (!isBot) {
+        window.location.href = 'https://tutienda.myshopify.com';
+      }
+    })();
+  </script>
 
   <!-- Top banner -->
   <header>
@@ -198,3 +209,4 @@
   </script>
 </body>
 </html>
+
