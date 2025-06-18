@@ -3,136 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ventacenter | Taza Térmica 600ml</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Productos Térmicos | TuTaza</title>
+  <meta name="description" content="Compra tazas térmicas de alta calidad, ligeras, sin marca específica. Mantén tus bebidas calientes o frías por horas.">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #fff;
-      color: #222;
-    }
-    header {
-      background-color: #fff0ec;
-      padding: 12px 40px;
-      text-align: center;
-      font-size: 14px;
-      color: #000;
-      font-weight: 500;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      border-bottom: 1px solid #eee;
-    }
-    nav .logo {
-      font-size: 22px;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
-    main {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    .left, .right {
-      flex: 1;
-      min-width: 300px;
-      margin: 10px;
-    }
-    .left img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 0;
-    }
-    h2 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #888;
-    }
-    .features {
-      margin: 20px 0;
-    }
-    .features p {
-      font-weight: 600;
-      margin: 10px 0;
-    }
-    .description {
-      background-color: #ffe7dd;
-      padding: 20px;
-      border-radius: 4px;
-      font-size: 15px;
-    }
-    .buy {
-      margin-top: 40px;
-    }
-    .price {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .btn {
-      background-color: #ff5e2d;
-      color: white;
-      border: none;
-      padding: 14px 28px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #aaa;
-      margin-top: 40px;
-    }
+    /* Reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background: #f4f4f4; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* Encabezado */
+    header { background: #fff; border-bottom: 1px solid #ddd; }
+    .top-banner { background: #e0f7fa; color: #006064; text-align: center; padding: 8px; font-size: 14px; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
+    .nav .logo { font-size: 24px; font-weight: bold; text-transform: uppercase; }
+    .nav ul { list-style: none; display: flex; gap: 20px; }
+    .nav ul li a { font-weight: 500; }
+
+    /* Hero */
+    .hero { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background: #fff; padding: 60px 20px; }
+    .hero .text { flex: 1; min-width: 300px; max-width: 600px; padding: 20px; }
+    .hero .text h1 { font-size: 36px; margin-bottom: 20px; }
+    .hero .text p { font-size: 18px; margin-bottom: 20px; }
+    .hero .text .btn { background: #00796b; color: #fff; padding: 12px 24px; border-radius: 4px; font-size: 16px; display: inline-block; }
+    .hero .media { flex: 1; min-width: 300px; max-width: 500px; padding: 20px; }
+
+    /* Sección de características */
+    .features { background: #fff; padding: 40px 20px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .features .feature { background: #fafafa; border: 1px solid #eee; padding: 20px; border-radius: 6px; text-align: center; }
+    .features .feature h3 { font-size: 20px; margin-bottom: 10px; }
+    .features .feature p { font-size: 14px; color: #555; }
+
+    /* Galería de producto */
+    .gallery { padding: 40px 20px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .gallery img { border-radius: 8px; }
+
+    /* Testimonios */
+    .reviews { background: #fff; padding: 40px 20px; margin: 20px 0; }
+    .reviews h2 { text-align: center; margin-bottom: 30px; font-size: 28px; }
+    .reviews .card { max-width: 600px; margin: 0 auto 20px; padding: 20px; border: 1px solid #ddd; border-radius: 6px; background: #fafafa; }
+    .reviews .card p { font-style: italic; margin-bottom: 10px; }
+    .reviews .card .author { text-align: right; font-weight: bold; }
+
+    /* FAQ */
+    .faq { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    .faq h2 { margin-bottom: 20px; font-size: 28px; }
+    .faq details { margin-bottom: 12px; padding: 12px; background: #fff; border-radius: 4px; border: 1px solid #eee; }
+    .faq summary { font-weight: 600; cursor: pointer; }
+
+    /* Footer */
+    footer { background: #333; color: #fff; text-align: center; padding: 20px; font-size: 14px; }
   </style>
 </head>
 <body>
   <header>
-    Envío gratis a todo el mundo desde 49 €
+    <div class="top-banner">Envío gratuito a toda Europa desde 50€</div>
+    <nav class="nav">
+      <div class="logo">TuTaza</div>
+      <ul>
+        <li><a href="#features">Características</a></li>
+        <li><a href="#gallery">Galería</a></li>
+        <li><a href="#reviews">Opiniones</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+      </ul>
+    </nav>
   </header>
-  <nav>
-    <div class="logo">Ventacenter</div>
-    <div>
-      <span>Productos</span>
+
+  <section class="hero" id="hero">
+    <div class="text">
+      <h1>Taza Térmica Reutilizable 600ml</h1>
+      <p>Mantén tus bebidas a la temperatura perfecta todo el día. Diseño elegante, sin condensación y con tapa hermética.</p>
+      <a href="#buy" class="btn">Comprar ahora</a>
     </div>
-  </nav>
-  <main>
-    <div class="left">
-      <img src="https://cdn.pixabay.com/photo/2020/04/14/16/21/thermo-cup-5042486_960_720.jpg" alt="Taza térmica">
+    <div class="media">
+      <img src="https://cdn.pixabay.com/photo/2018/09/14/22/32/mug-3682247_960_720.jpg" alt="Taza térmica 600ml">
     </div>
-    <div class="right">
-      <h2>Taza Térmica</h2>
-      <h1>600 ml</h1>
-      <div class="features">
-        <p>6H caliente y 24H frío</p>
-        <p>Ideal para bebidas y snacks</p>
-        <p>100% hermética y sin condensación</p>
-      </div>
-      <div class="description">
-        Esta taza térmica mantiene tus bebidas calientes o frías durante horas. Diseñada con acero inoxidable premium y tapa antifugas, es perfecta para llevar al trabajo, gimnasio o tus aventuras.
-        <br><br>
-        Puedes personalizarla o combinarla con accesorios compatibles.
-      </div>
-      <div class="buy">
-        <div class="price">37,00 €</div>
-        <button class="btn">AGREGAR AL CARRITO</button>
-      </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="feature">
+      <h3>6H Caliente / 24H Frío</h3>
+      <p>Conserva la temperatura ideal de tus bebidas durante horas.</p>
     </div>
-  </main>
+    <div class="feature">
+      <h3>100% Hermética</h3>
+      <p>Tapa de cierre seguro que evita filtraciones y derrames.</p>
+    </div>
+    <div class="feature">
+      <h3>Acero Inoxidable</h3>
+      <p>Material duradero y libre de BPA, seguro para uso diario.</p>
+    </div>
+    <div class="feature">
+      <h3>Diseño Minimalista</h3>
+      <p>Apto para oficina, gimnasio o viajes. Variedad de colores neutros.</p>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <img src="https://cdn.pixabay.com/photo/2016/03/27/22/22/cup-1282566_960_720.jpg" alt="Detalle taza térmica">
+    <img src="https://cdn.pixabay.com/photo/2021/01/04/15/54/coffee-5880948_960_720.jpg" alt="Taza en escritorio">
+    <img src="https://cdn.pixabay.com/photo/2017/09/01/15/45/mug-2708395_960_720.jpg" alt="Taza con tapa hermética">
+    <img src="https://cdn.pixabay.com/photo/2018/08/14/13/23/mug-3609837_960_720.jpg" alt="Taza lifestyle">
+  </section>
+
+  <section class="reviews" id="reviews">
+    <h2>Opiniones de clientes</h2>
+    <div class="card">
+      <p>"Excelente calidad y mantiene el calor todo el día. Ideal para mi oficina."</p>
+      <div class="author">– María G.</div>
+    </div>
+    <div class="card">
+      <p>"Perfecta para mis excursiones en montaña. No pierde ni una gota de calor."</p>
+      <div class="author">– Juan P.</div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿De qué material está hecha?</summary>
+      <p>Acero inoxidable 18/8, libre de BPA, con aislamiento de doble pared.</p>
+    </details>
+    <details>
+      <summary>¿Es apta para lavavajillas?</summary>
+      <p>Se recomienda lavado a mano para conservar la pintura, aunque es compatible con lavavajillas.</p>
+    </details>
+    <details>
+      <summary>¿Incluye funda o accesorios?</summary>
+      <p>La taza se vende sin accesorios, aunque puedes adquirir fundas de neopreno por separado.</p>
+    </details>
+  </section>
+
+  <section id="buy" style="text-align:center; padding:40px 20px; background:#fff;">
+    <h2>Precio: 29,99 €</h2>
+    <a href="#" class="btn">Agregar al carrito</a>
+  </section>
+
   <footer>
-    &copy; 2025 Ventacenter. Todos los derechos reservados.
+    &copy; 2025 TuTaza. Todos los derechos reservados.
   </footer>
 </body>
 </html>
-
