@@ -5,51 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TuTaza | Taza Térmica Premium 600ml</title>
   <meta name="description" content="Taza térmica premium 600ml, doble pared de acero inoxidable, mantiene tus bebidas calientes o frías por horas. Compra ahora en TuTaza.">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type"        content="product">
-  <meta property="og:title"       content="TuTaza | Taza Térmica Premium 600ml">
-  <meta property="og:description" content="Mantén tus bebidas calientes o frías hasta 24h. Doble pared de acero inoxidable.">
-  <meta property="og:image"       content="https://gianinnashop.github.io/ventacenter/images/taza-hero.jpg">
-  <meta property="og:url"         content="https://gianinnashop.github.io/ventacenter/">
-
-  <!-- Twitter -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="TuTaza | Taza Térmica Premium 600ml">
-  <meta name="twitter:description" content="Mantén tus bebidas calientes o frías hasta 24h. Doble pared de acero inoxidable.">
-  <meta name="twitter:image"       content="https://gianinnashop.github.io/ventacenter/images/taza-hero.jpg">
-
-  <!-- Product Schema JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Taza Térmica Premium 600ml",
-    "image": [
-      "https://gianinnashop.github.io/ventacenter/images/taza-hero.jpg",
-      "https://gianinnashop.github.io/ventacenter/images/taza-1.jpg",
-      "https://gianinnashop.github.io/ventacenter/images/taza-2.jpg"
-    ],
-    "description": "Doble pared de acero inoxidable. Mantiene 6h caliente / 24h frío.",
-    "sku": "TUTZ600",
-    "mpn": "12345",
-    "brand": {
-      "@type": "Brand",
-      "name": "TuTaza"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://gianinnashop.github.io/ventacenter/checkout.html",
-      "priceCurrency": "EUR",
-      "price": "29.99",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
   <style>
     /* --- Reset & Base Styles --- */
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -92,7 +49,7 @@
     .buy-area button:hover { background:#005a4f; }
 
     /* --- Gallery --- */
-    .gallery { padding:40px 20px; max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .gallery { padding:40px 20px; max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; background:#fff; }
 
     /* --- Reviews --- */
     .reviews { background:#fff; padding:40px 20px; margin:20px 0; }
@@ -114,6 +71,7 @@
   </style>
 </head>
 <body>
+
   <!-- Top banner -->
   <header>
     <div class="top-bar">Envío gratuito a toda Europa desde 50€</div>
@@ -146,19 +104,33 @@
       <h2>Taza Térmica Reutilizable</h2>
       <h3>600ml</h3>
       <div class="features">
-        <!-- íconos + características -->
+        <div class="features-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2 4H10l2-4zM4 6h16v2H4V6zM5 9h14v12H5V9z"/></svg>
+          <span>6H caliente / 24H frío</span>
+        </div>
+        <div class="features-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10"/></svg>
+          <span>Hermética y sin condensación</span>
+        </div>
+        <div class="features-item">
+          <svg viewBox="0 0 24 24"><path d="M4 22h16V2H4v20z"/></svg>
+          <span>Acero inoxidable 18/8</span>
+        </div>
+        <div class="features-item">
+          <svg viewBox="0 0 24 24"><path d="M12 4l4 8H8l4-8z"/></svg>
+          <span>Diseño minimalista</span>
+        </div>
       </div>
       <p class="description">Disfruta de tu bebida favorita sin preocuparte por fugas o temperatura. Perfecta para oficina, gimnasio, viajes y exteriores. Personaliza tu taza con accesorios opcionales.</p>
       <div class="price">29,99 €</div>
       <div class="buy-area">
         <input type="number" min="1" value="1">
-        <!-- Apunta al checkout simulado -->
-        <a href="checkout.html"><button>Comprar ahora</button></a>
+        <button id="addCart">Agregar al carrito</button>
       </div>
     </div>
   </section>
 
-  <!-- Gallery -->
+  <!-- Image gallery -->
   <section class="gallery" id="gallery">
     <img src="images/taza-1.jpg" alt="Detalle taza 1">
     <img src="images/taza-2.jpg" alt="Detalle taza 2">
@@ -166,21 +138,63 @@
     <img src="images/taza-4.jpg" alt="Detalle taza 4">
   </section>
 
-  <!-- Reviews -->
+  <!-- Customer reviews -->
   <section class="reviews" id="reviews">
     <h2>Opiniones de clientes</h2>
-    <!-- tarjetas de reseñas -->
+    <div class="review-card">
+      <p>“¡Me encanta! Conserva mi café caliente toda la mañana. Además el diseño es súper elegante.”</p>
+      <div class="author">– Laura M.</div>
+    </div>
+    <div class="review-card">
+      <p>“Compré tres para regalos de empresa y todos quedaron fascinados. Sin fugas y fácil de limpiar.”</p>
+      <div class="author">– Javier P.</div>
+    </div>
+    <div class="review-card">
+      <p>“Ideal para el gimnasio. Mantiene la bebida fría incluso con calor al aire libre. Muy resistente.”</p>
+      <div class="author">– Ana G.</div>
+    </div>
+    <div class="review-card">
+      <p>“Buena capacidad y el corcho en la base evita que se raye la mesa. ¡Repetiré compra seguro!”</p>
+      <div class="author">– Carlos R.</div>
+    </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ section -->
   <section class="faq" id="faq">
     <h2>Preguntas frecuentes</h2>
-    <!-- detalles -->
+    <details>
+      <summary>¿La taza es apta para lavavajillas?</summary>
+      <p>Recomendamos lavar a mano para conservar el acabado mate. Si la metes en lavavajillas, ponla en la rejilla superior.</p>
+    </details>
+    <details>
+      <summary>¿Puedo usar bebidas muy calientes?</summary>
+      <p>Sí. Gracias a su doble pared mantiene la temperatura sin que toques la parte exterior. Calor hasta 6 h.</p>
+    </details>
+    <details>
+      <summary>¿Incluye tapa y corcho base?</summary>
+      <p>Incluye tapa hermética de plástico libre de BPA y base de corcho antideslizante. Accesorios adicionales por separado.</p>
+    </details>
+    <details>
+      <summary>¿Cuál es el plazo de envío?</summary>
+      <p>Envío gratuito a toda Europa en 3–5 días laborables. Si lo necesitas antes, elige envío express (+ 5 €).</p>
+    </details>
+    <details>
+      <summary>¿Tienen garantía?</summary>
+      <p>Garantía de 2 años contra defectos de fabricación. Cualquier incidencia, escríbenos a soporte@tutaza.com.</p>
+    </details>
   </section>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 TuTaza. Todos los derechos reservados.
+    &copy; 2025 TuTaza. Todos los derechos reservados. | <a href="#faq" style="color:#91e5c1;">Política de privacidad</a>
   </footer>
+
+  <script>
+    // Simula agregar al carrito
+    document.getElementById('addCart').addEventListener('click', () => {
+      const qty = document.querySelector('.buy-area input').value;
+      alert(qty + ' artículo(s) agregado(s) al carrito.');
+    });
+  </script>
 </body>
 </html>
