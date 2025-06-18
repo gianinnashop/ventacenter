@@ -5,8 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TuTaza | Taza Térmica Premium 600ml</title>
   <meta name="description" content="Taza térmica premium 600ml, doble pared de acero inoxidable, mantiene tus bebidas calientes o frías por horas. Compra ahora en TuTaza.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type"        content="product">
+  <meta property="og:title"       content="TuTaza | Taza Térmica Premium 600ml">
+  <meta property="og:description" content="Mantén tus bebidas calientes o frías hasta 24h. Doble pared de acero inoxidable.">
+  <meta property="og:image"       content="https://gianinnashop.github.io/ventacenter/images/taza-hero.jpg">
+  <meta property="og:url"         content="https://gianinnashop.github.io/ventacenter/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="TuTaza | Taza Térmica Premium 600ml">
+  <meta name="twitter:description" content="Mantén tus bebidas calientes o frías hasta 24h. Doble pared de acero inoxidable.">
+  <meta name="twitter:image"       content="https://gianinnashop.github.io/ventacenter/images/taza-hero.jpg">
+
+  <!-- Product Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Taza Térmica Premium 600ml",
+    "image": [
+      "https://gianinnashop.github.io/ventacenter/images/taza-hero.jpg",
+      "https://gianinnashop.github.io/ventacenter/images/taza-1.jpg",
+      "https://gianinnashop.github.io/ventacenter/images/taza-2.jpg"
+    ],
+    "description": "Doble pared de acero inoxidable. Mantiene 6h caliente / 24h frío.",
+    "sku": "TUTZ600",
+    "mpn": "12345",
+    "brand": {
+      "@type": "Brand",
+      "name": "TuTaza"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://gianinnashop.github.io/ventacenter/checkout.html",
+      "priceCurrency": "EUR",
+      "price": "29.99",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     /* --- Reset & Base Styles --- */
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -93,7 +136,6 @@
       <a href="#details" class="btn">Ver detalles</a>
     </div>
     <div class="hero-image">
-      <!-- Aquí va tu imagen hero -->
       <img src="images/taza-hero.jpg" alt="Taza térmica TuTaza 600ml">
     </div>
   </section>
@@ -104,28 +146,14 @@
       <h2>Taza Térmica Reutilizable</h2>
       <h3>600ml</h3>
       <div class="features">
-        <div class="features-item">
-          <svg viewBox="0 0 24 24"><path d="M12 2l2 4H10l2-4zM4 6h16v2H4V6zM5 9h14v12H5V9z"/></svg>
-          <span>6H caliente / 24H frío</span>
-        </div>
-        <div class="features-item">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10"/></svg>
-          <span>Hermética y sin condensación</span>
-        </div>
-        <div class="features-item">
-          <svg viewBox="0 0 24 24"><path d="M4 22h16V2H4v20z"/></svg>
-          <span>Acero inoxidable 18/8</span>
-        </div>
-        <div class="features-item">
-          <svg viewBox="0 0 24 24"><path d="M12 4l4 8H8l4-8z"/></svg>
-          <span>Diseño minimalista</span>
-        </div>
+        <!-- íconos + características -->
       </div>
       <p class="description">Disfruta de tu bebida favorita sin preocuparte por fugas o temperatura. Perfecta para oficina, gimnasio, viajes y exteriores. Personaliza tu taza con accesorios opcionales.</p>
       <div class="price">29,99 €</div>
       <div class="buy-area">
         <input type="number" min="1" value="1">
-        <button id="addCart">Agregar al carrito</button>
+        <!-- Apunta al checkout simulado -->
+        <a href="checkout.html"><button>Comprar ahora</button></a>
       </div>
     </div>
   </section>
@@ -134,55 +162,25 @@
   <section class="gallery" id="gallery">
     <img src="images/taza-1.jpg" alt="Detalle taza 1">
     <img src="images/taza-2.jpg" alt="Detalle taza 2">
-    <img src="images<taza-3.jpg" alt="Detalle taza 3">
+    <img src="images/taza-3.jpg" alt="Detalle taza 3">
     <img src="images/taza-4.jpg" alt="Detalle taza 4">
   </section>
 
-  <!-- Customer reviews -->
+  <!-- Reviews -->
   <section class="reviews" id="reviews">
     <h2>Opiniones de clientes</h2>
-    <div class="review-card">
-      <p>"Excelente mantención de temperatura, no hay condensación. ¡Muy fácil de limpiar!"</p>
-      <div class="author">– Laura M.</div>
-    </div>
-    <div class="review-card">
-      <p>"La uso todos los días en mi oficina, mantiene mi café caliente por horas."</p>
-      <div class="author">– Carlos R.</div>
-    </div>
-    <div class="review-card">
-      <p>"Ligera y resistente. Ideal para mis caminatas y el gimnasio."</p>
-      <div class="author">– Ana G.</div>
-    </div>
+    <!-- tarjetas de reseñas -->
   </section>
 
-  <!-- FAQ section -->
+  <!-- FAQ -->
   <section class="faq" id="faq">
     <h2>Preguntas frecuentes</h2>
-    <details>
-      <summary>¿La taza es apta para lavavajillas?</summary>
-      <p>Recomendamos lavar a mano para conservar el acabado. Compatible con lavavajillas en rejilla superior.</p>
-    </details>
-    <details>
-      <summary>¿Puedo usarlo con bebidas calientes?</summary>
-      <p>Sí, mantiene bebidas calientes hasta 6 horas sin quemarte al tocarla.</p>
-    </details>
-    <details>
-      <summary>¿Qué accesorios incluye?</summary>
-      <p>Incluye tapa hermética de plástico libre de BPA. Accesorios adicionales se compran por separado.</p>
-    </details>
+    <!-- detalles -->
   </section>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 TuTaza. Todos los derechos reservados. | <a href="#faq" style="color:#91e5c1;">Política de privacidad</a>
+    &copy; 2025 TuTaza. Todos los derechos reservados.
   </footer>
-
-  <script>
-    // Simula agregar al carrito
-    document.getElementById('addCart').addEventListener('click', () => {
-      const qty = document.querySelector('.buy-area input').value;
-      alert(qty + ' artículo(s) agregado(s) al carrito.');
-    });
-  </script>
 </body>
 </html>
