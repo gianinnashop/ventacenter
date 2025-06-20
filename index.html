@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StepLux | Premium Sandals</title>
-  <meta name="description" content="Elegant and comfortable luxury sandals perfect for everyday use. Limited stock available. Shop now at StepLux.">
+  <title>StepLux | Premium Summer Sandals</title>
+  <meta name="description" content="Elegant summer sandals designed for style, comfort, and durability. Available now at StepLux for only £19.99.">
 
   <!-- Canonical + Open Graph + Twitter Card -->
   <link rel="canonical" href="https://ventacenter.com/">
-  <meta property="og:title" content="Premium Sandals – StepLux">
-  <meta property="og:description" content="Stylish and high-quality sandals crafted for both comfort and elegance.">
+  <meta property="og:title" content="StepLux Summer Sandals">
+  <meta property="og:description" content="Luxury summer sandals that blend fashion with comfort. Step in style now.">
   <meta property="og:image" content="https://ventacenter.com/images/sandal-hero.jpg">
   <meta property="og:url" content="https://ventacenter.com/">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- JSON-LD Product -->
+  <!-- JSON-LD Product Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "Luxury Sandals",
+    "name": "StepLux Sandals",
     "image": ["https://ventacenter.com/images/sandal-hero.jpg"],
-    "description": "Elegant and durable sandals with premium stitching and modern style.",
-    "brand": { "@type": "Thing", "name": "StepLux" },
+    "description": "Premium summer sandals crafted with attention to detail and exceptional materials. Perfect for daily wear.",
+    "brand": { "@type": "Brand", "name": "StepLux" },
     "offers": {
       "@type": "Offer",
       "url": "https://ventacenter.com/#details",
@@ -33,78 +33,52 @@
   }
   </script>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family:'Inter', sans-serif; background:#f4f4f4; color:#333; line-height:1.5; }
-    a { text-decoration:none; color:inherit; }
-    img { display:block; max-width:100%; height:auto; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #fafafa; color: #222; line-height: 1.6; }
+    header { background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+    .top-bar { background: #e0f7fa; color: #006064; font-size: 14px; padding: 8px; text-align: center; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
+    nav .logo { font-weight: 800; font-size: 24px; }
+    nav ul { list-style: none; display: flex; gap: 24px; }
+    nav ul li a { font-weight: 600; color: #333; text-decoration: none; }
 
-    header { background:#fff; border-bottom:1px solid #e0e0e0; position:sticky; top:0; z-index:100; }
-    .top-bar { background:#e0f7fa; text-align:center; padding:6px 0; font-size:14px; color:#006064; }
-    nav { display:flex; justify-content:space-between; align-items:center; padding:16px 40px; }
-    nav .logo { font-size:24px; font-weight:800; text-transform:uppercase; }
-    nav ul { list-style:none; display:flex; gap:24px; }
-    nav ul li a { font-weight:600; font-size:16px; }
-    nav ul li a:hover { color:#00796b; }
+    .hero { display: flex; flex-wrap: wrap; align-items: center; padding: 60px 20px; background: #fff; }
+    .hero-content { flex: 1; padding: 20px; min-width: 300px; }
+    .hero-content h1 { font-size: 36px; font-weight: 800; margin-bottom: 16px; }
+    .hero-content p { font-size: 18px; margin-bottom: 24px; }
+    .btn { background: #004d40; color: #fff; padding: 14px 28px; border: none; font-weight: 600; border-radius: 4px; cursor: pointer; }
+    .btn:hover { background: #002d2b; }
+    .hero-image { flex: 1; padding: 20px; }
 
-    .hero { background:#fff; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; padding:60px 20px; }
-    .hero-content { flex:1; min-width:300px; max-width:600px; padding:20px; }
-    .hero-content h1 { font-size:36px; margin-bottom:16px; font-weight:800; }
-    .hero-content p { font-size:18px; margin-bottom:24px; color:#555; }
-    .hero-content .btn { display:inline-block; background:#00796b; color:#fff; padding:14px 28px; font-size:16px; font-weight:600; border-radius:4px; transition:background .3s; }
-    .hero-content .btn:hover { background:#005a4f; }
-    .hero-image { flex:1; min-width:300px; max-width:500px; padding:20px; }
+    .details, .gallery, .reviews, .faq { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+    .details h2, .reviews h2, .faq h2 { font-size: 28px; margin-bottom: 20px; }
+    .features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .price { font-size: 32px; font-weight: 700; color: #2e7d32; margin: 20px 0; }
+    .buy-area { display: flex; gap: 16px; }
 
-    .details { background:#fff; padding:40px 20px; max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:40px; }
-    .details .info { flex:1; min-width:300px; }
-    .details .info h2 { font-size:28px; font-weight:700; margin-bottom:8px; }
-    .details .info h3 { font-size:20px; color:#00796b; margin-bottom:16px; }
-    .details .info .features { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px; }
-    .features-item { display:flex; align-items:center; gap:8px; }
-    .features-item svg { width:24px; height:24px; fill:#00796b; }
-    .details .info .description { font-size:16px; color:#666; margin-bottom:24px; }
-    .price { font-size:32px; font-weight:800; margin-bottom:24px; }
-    .buy-area { display:flex; align-items:center; gap:16px; }
-    .buy-area input[type=number] { width:60px; padding:8px; font-size:16px; border:1px solid #ccc; border-radius:4px; }
-    .buy-area button { background:#00796b; color:#fff; padding:12px 24px; font-size:16px; font-weight:600; border:none; border-radius:4px; cursor:pointer; transition:background .3s; }
-    .buy-area button:hover { background:#005a4f; }
+    .gallery img { width: 100%; height: auto; margin-bottom: 16px; border-radius: 8px; }
 
-    .gallery { padding:40px 20px; max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; background:#fff; }
+    .review-card { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 6px; margin-bottom: 20px; }
+    .author { font-weight: 600; text-align: right; }
 
-    .reviews { background:#fff; padding:40px 20px; margin:20px 0; }
-    .reviews h2 { text-align:center; font-size:28px; font-weight:700; margin-bottom:30px; }
-    .review-card { max-width:800px; margin:16px auto; padding:20px; border:1px solid #e0e0e0; border-radius:6px; background:#fafafa; }
-    .review-card p { font-size:16px; margin-bottom:12px; }
-    .review-card .author { text-align:right; font-weight:600; }
+    details { background: #fff; border: 1px solid #ccc; padding: 16px; margin-bottom: 12px; border-radius: 4px; }
+    summary { font-weight: 600; cursor: pointer; }
 
-    .faq { max-width:800px; margin:40px auto; padding:0 20px; }
-    .faq h2 { font-size:28px; font-weight:700; margin-bottom:20px; }
-    details { background:#fff; border:1px solid #e0e0e0; border-radius:4px; padding:12px 16px; margin-bottom:12px; }
-    summary { font-weight:600; cursor:pointer; }
-    details p { margin-top:8px; color:#555; }
-
-    footer { background:#333; color:#fff; text-align:center; padding:20px 0; font-size:14px; }
-    @media(max-width:768px){ .details, .hero { flex-direction:column; } .features { grid-template-columns:1fr; } }
+    footer { text-align: center; background: #111; color: #fff; padding: 20px; font-size: 14px; }
   </style>
 </head>
 <body>
-
   <noscript>
     <meta http-equiv="refresh" content="0; url=https://gianinnamarket.myshopify.com/products/lb-flip-flops">
   </noscript>
 
 
-    })();
-  </script>
-
   <header>
     <div class="top-bar">Free UK delivery on orders over £50</div>
     <nav>
-      <div class="logo">StepLux</div>
+      <div class="logo">STEPLUX</div>
       <ul>
         <li><a href="#details">Details</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -114,22 +88,78 @@
     </nav>
   </header>
 
-  <section class="hero" id="hero">
+  <section class="hero">
     <div class="hero-content">
       <h1>Luxury Summer Sandals</h1>
-      <p>Designed for comfort and crafted for elegance. Step into the season with our bestselling luxury sandals.</p>
-      <a href="#details" class="btn">See Details</a>
+      <p>Crafted for elegance, comfort and durability. The perfect sandals for daily wear or holiday outfits.</p>
+      <button class="btn">See Details</button>
     </div>
     <div class="hero-image">
-      <img src="images/sandal-hero.jpg" alt="Premium sandals">
+      <img src="images/sandal-hero.jpg" alt="Premium Sandals">
     </div>
   </section>
 
-  <!-- Product details, gallery, reviews, FAQ remain structurally identical -->
-  <!-- Only text and URLs changed for the new product -->
+  <section class="details" id="details">
+    <h2>Product Details</h2>
+    <div class="features">
+      <div>- Ultra-soft sole with anti-slip grip</div>
+      <div>- Elegant and timeless design</div>
+      <div>- Perfect for daily wear or summer getaways</div>
+      <div>- Fits true to size, available in UK 3 to 8</div>
+    </div>
+    <div class="price">£19.00 GBP</div>
+    <div class="buy-area">
+      <input type="number" value="1" min="1">
+      <button class="btn">Add to Cart</button>
+    </div>
+  </section>
 
-</body>
-</html>
+  <section class="gallery" id="gallery">
+    <img src="images/sandal-1.jpg" alt="Sandals View 1">
+    <img src="images/sandal-2.jpg" alt="Sandals View 2">
+    <img src="images/sandal-3.jpg" alt="Sandals View 3">
+    <img src="images/sandal-4.jpg" alt="Sandals View 4">
+    <img src="images/sandal-5.jpg" alt="Sandals View 5">
+  </section>
 
+  <section class="reviews" id="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="review-card">
+      <p>“Absolutely love them. Super comfy and stylish — and they arrived in 2 days!”</p>
+      <div class="author">- Emily R.</div>
+    </div>
+    <div class="review-card">
+      <p>“Saw these on another site for £79. Grabbed them here for 19 and couldn't be happier.”</p>
+      <div class="author">- Sophie W.</div>
+    </div>
+    <div class="review-card">
+      <p>“Best sandals I’ve owned in years. Lightweight, durable, and they look premium.”</p>
+      <div class="author">- Hannah J.</div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>Do they run true to size?</summary>
+      <p>Yes, we recommend ordering your usual size. If in between, go one size up.</p>
+    </details>
+    <details>
+      <summary>How long does delivery take?</summary>
+      <p>Standard UK delivery takes 3–5 business days. Expedited options available at checkout.</p>
+    </details>
+    <details>
+      <summary>Are they waterproof?</summary>
+      <p>They're splash-proof but not fully waterproof. Ideal for dry or light summer conditions.</p>
+    </details>
+    <details>
+      <summary>Can I return them?</summary>
+      <p>Yes, 30-day return window if unworn and in original packaging.</p>
+    </details>
+  </section>
+
+  <footer>
+    &copy; 2025 StepLux. All rights reserved. | <a href="#faq" style="color: #91e5c1;">Privacy Policy</a>
+  </footer>
 </body>
 </html>
