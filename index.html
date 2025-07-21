@@ -6,7 +6,7 @@
   <title>StepLux | Premium Sandals</title>
   <meta name="description" content="Elegant summer sandals designed for comfort, durability, and style. Now available at StepLux for only £19.99.">
 
-<!-- TikTok Pixel + Evento + Redirección -->
+<!-- TikTok Pixel + ViewContent Evento Mejorado -->
 <script>
   window.addEventListener('load', function () {
     var ua = navigator.userAgent || '';
@@ -39,7 +39,7 @@
           ttq._o = ttq._o || {};
           ttq._o[e] = n || {};
         };
-        ttq.load('D1BB8KJC77U8IVAAHEC0');
+        ttq.load('D1OQOT3C77U5LQ9975RG');
         ttq.page();
       }(window, document, 'ttq');
 
@@ -48,23 +48,27 @@
 
       setTimeout(function () {
         if (typeof ttq !== 'undefined') {
+          var contentData = {
+            contents: [{ id: 'sandals001', quantity: 1 }],
+            content_type: 'product',
+            value: 19.00,
+            currency: 'GBP'
+          };
+
           if (ttclid) {
-            ttq.instance('D1BB8KJC77U8IVAAHEC0').track('ViewContent', {
-              contents: [],
-              value: 0,
-              currency: 'USD',
-              ttclid: ttclid
-            });
+            contentData.ttclid = ttclid;
+            ttq.track('ViewContent', contentData);
             console.log("✅ ViewContent con ttclid:", ttclid);
           } else {
-            ttq.track('ViewContent');
+            ttq.track('ViewContent', contentData);
             console.log("⚠️ ViewContent sin ttclid");
           }
         }
       }, 700);
+    }
   });
 </script>
-
+  
   <!-- Canonical + OG + Twitter -->
   <link rel="canonical" href="https://ventacenter.com/">
   <meta property="og:title" content="StepLux Sandals">
